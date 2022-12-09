@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    private var userLoginOnMainScreen: Account!
+    var viewModel = LoginViewModel()
     
     //MARK: - UI ELEMENTS
     private lazy var loginTextField: UITextField = {
@@ -70,7 +70,6 @@ class LoginViewController: UIViewController {
         setupSubviews(at: view, subviews: TextFieldsStackView, buttonStackView)
         view.backgroundColor = .systemBackground
         updateViewConstraints()
-        
     }
     
     private func setupSubviews(at: UIView, subviews: UIView...) {
@@ -83,14 +82,12 @@ class LoginViewController: UIViewController {
     @objc func loginButtonTapped() {
         guard let currentName = StorageManager.shared.fetchAccount() else { return }
         if loginTextField.text == currentName.userName && passwordTextField.text == currentName.userPassword {
-            self.view.window!.rootViewController = UINavigationController(rootViewController: TableViewController())
-            print("You did logged by \(currentName.userName)\(currentName.userPassword)")
+            self.view.window!.rootViewController = UINavigationController(rootViewController: CryptoTableViewController())
         } else {
             print("Your login isn't correct")
         }
         
     }
-    
     
     @objc func registrationButtonTapped() {
         let registrationVC = RegistrationViewController()
@@ -119,8 +116,4 @@ class LoginViewController: UIViewController {
         ])
     }
     
-    
-    deinit {
-        print("Login screen has been dealocated")
-    }
 }

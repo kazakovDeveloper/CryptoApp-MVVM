@@ -18,30 +18,32 @@ final class NetworkManager {
     
     static let shared = NetworkManager()
     
-    private struct Constants{
-        static let url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=25&page=1&sparkline=false&price_change_percentage=24h"
-    }
-    
     private init() {}
     
-    public func getAllCryptoData(completion: @escaping (Result<[CryptoCoin], Error>) -> Void) {
-        guard let url = URL(string: Constants.url) else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data, error == nil else {
+    public func getAllCoinsData(completion: @escaping (Result<[String:CryptoCoin], Error>) -> Void ) {
+        NetworkConstant.coinNames.allCases.forEach { names in
+            guard let url = URL(string: names.coinURL) else {
+                completion(.failure(NetworkError.invalidURL))
                 return
             }
-            do {
-                let cryptoCoins = try JSONDecoder().decode([CryptoCoin].self, from: data)
-                completion(.success(cryptoCoins))
+            
+            URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
+                guard let data = dataResponse, error == nil else {
+                    return
+                    
+                }
+                do {
+                    let resultData = try JSONDecoder().decode([String:CryptoCoin].self, from: data)
+                    completion(.success(resultData ))
+                }
+                catch {
+                    completion(.failure(NetworkError.noData))
+                }
             }
-            catch{
-                completion(.failure(error))
+            .resume()
             }
-        }
-        task.resume()
     }
-    
+        
     func fetchImage(from url: URL?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
         guard let url = url else {
             completion(.failure(.invalidURL))
@@ -60,7 +62,7 @@ final class NetworkManager {
     }
     
     func saveImage(from url: URL, completion: @escaping(Result<UIImage, Error>) -> Void) {
-        if let cachedImage = ImageCacheManager.shared.object(forKey: url.lastPathComponent as NSString) {
+        if let cachedImage = ImageCacheManager.shared.object(forKey: url.absoluteString as NSString) {
             completion(.success(cachedImage))
             return
         }
@@ -68,8 +70,7 @@ final class NetworkManager {
             switch result {
             case .success(let image):
                 guard let uiImage = UIImage(data: image) else { return }
-                ImageCacheManager.shared.setObject(uiImage, forKey: url.lastPathComponent as NSString)
-                print("Image from network: ", url.lastPathComponent)
+                ImageCacheManager.shared.setObject(uiImage, forKey: url.absoluteString as NSString)
                 completion(.success(uiImage))
             case .failure(let error):
                 print("Error \(error)")

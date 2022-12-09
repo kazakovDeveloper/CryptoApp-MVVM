@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let navController = UINavigationController(rootViewController: TableViewController())
+        let navController = UINavigationController(rootViewController: CryptoTableViewController())
         navController.navigationBar.prefersLargeTitles = true
         
         window?.makeKeyAndVisible()

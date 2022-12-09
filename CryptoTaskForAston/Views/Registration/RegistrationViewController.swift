@@ -89,9 +89,7 @@ class RegistrationViewController: UIViewController {
         
         let login = Account(userName: userName, userPassword: password)
         StorageManager.shared.save(user: login)
-        
-        //delegate.registerStatusCheck(user: Account(userName: userName, userPassword: password))
-        print("register is complete")
+
         dismiss(animated: true)
     }
     
@@ -109,7 +107,6 @@ class RegistrationViewController: UIViewController {
         dismiss(animated: true)
     }
     
-
     //MARK: - UPDATE CONSTRAINTS
     override func updateViewConstraints() {
         super.updateViewConstraints()

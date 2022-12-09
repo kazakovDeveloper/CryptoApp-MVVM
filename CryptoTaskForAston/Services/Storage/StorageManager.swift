@@ -27,6 +27,7 @@ struct StorageManager {
         }
         return nil
     }
+    
     func deleteAccount() {
         let currentAccount = fetchAccount()
         

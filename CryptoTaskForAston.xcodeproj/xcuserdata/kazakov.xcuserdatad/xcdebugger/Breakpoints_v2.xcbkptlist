@@ -3,4 +3,115 @@
    uuid = "A18D4F5A-EF79-4EDA-BB67-388F6B3CF01C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F967C2A-9A3E-4EF9-BFF1-8EBB9708D9ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptoTaskForAston/ViewModels/CoinsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "coinsCellViewModel"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2F967C2A-9A3E-4EF9-BFF1-8EBB9708D9ED - c30e4a376817193"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CryptoTaskForAston.CoinsViewModel.init(coinService: CryptoTaskForAston.CoinsServiceProtocol) -&gt; CryptoTaskForAston.CoinsViewModel"
+                  moduleName = "CryptoTaskForAston"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazakov/Desktop/Course/CryptoTaskForAston/CryptoTaskForAston/ViewModels/CoinsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "285">
+               </Location>
+               <Location
+                  uuid = "2F967C2A-9A3E-4EF9-BFF1-8EBB9708D9ED - d85b797f150c2c2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CryptoTaskForAston.CoinsViewModel.coinsCellViewModel.getter : Swift.Array&lt;CryptoTaskForAston.CoinViewCellViewModel&gt;"
+                  moduleName = "CryptoTaskForAston"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazakov/Desktop/Course/CryptoTaskForAston/CryptoTaskForAston/ViewModels/CoinsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "2F967C2A-9A3E-4EF9-BFF1-8EBB9708D9ED - deb0b5e28d26c820"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CryptoTaskForAston.CoinsViewModel.coinsCellViewModel.setter : Swift.Array&lt;CryptoTaskForAston.CoinViewCellViewModel&gt;"
+                  moduleName = "CryptoTaskForAston"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazakov/Desktop/Course/CryptoTaskForAston/CryptoTaskForAston/ViewModels/CoinsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "121">
+               </Location>
+               <Location
+                  uuid = "2F967C2A-9A3E-4EF9-BFF1-8EBB9708D9ED - d0fd60ccf83bbad3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CryptoTaskForAston.CoinsViewModel.coinsCellViewModel.modify : Swift.Array&lt;CryptoTaskForAston.CoinViewCellViewModel&gt;"
+                  moduleName = "CryptoTaskForAston"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazakov/Desktop/Course/CryptoTaskForAston/CryptoTaskForAston/ViewModels/CoinsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "2F967C2A-9A3E-4EF9-BFF1-8EBB9708D9ED - 31e2aed801290d6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CryptoTaskForAston.CoinsViewModel.coinsCellViewModel.modify : Swift.Array&lt;CryptoTaskForAston.CoinViewCellViewModel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CryptoTaskForAston"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kazakov/Desktop/Course/CryptoTaskForAston/CryptoTaskForAston/ViewModels/CoinsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7247487-52CC-4A7B-9FCC-5DEAA59B8561"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptoTaskForAston/ViewModels/CoinsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "coinsCellViewModel"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
